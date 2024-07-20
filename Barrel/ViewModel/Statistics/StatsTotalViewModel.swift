@@ -10,7 +10,7 @@ import Foundation
 @Observable
 final class StatsTotalViewModel {
     
-    let entries = EntryManager.shared.entries
+    let entries = EntryRepository.shared.entries
     
     var prices: [Double] {
         return entries
@@ -20,7 +20,7 @@ final class StatsTotalViewModel {
     
     var litres: [Double] {
         return entries
-            .map { $0.litres }
+            .map { $0.liters ?? 0 }
     }
     
     var mileages: [Int] {

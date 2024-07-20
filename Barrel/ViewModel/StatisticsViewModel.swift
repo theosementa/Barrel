@@ -9,6 +9,7 @@ import Foundation
 
 @Observable
 final class StatisticsViewModel {
+    private let entryRepo: EntryRepository = .shared
     
     var selectedTab: Int = 0
     var selectedViewModel: StatisticsForSelectedMonthViewModel? = nil
@@ -16,9 +17,6 @@ final class StatisticsViewModel {
     var viewModels: [StatisticsForSelectedMonthViewModel] = []
     
     init() {
-        if EntryManager.shared.entries.isEmpty {
-            EntryManager.shared.fetchEntries()
-        }
         self.viewModels = fetchViewModels()
     }
 }
@@ -26,15 +24,17 @@ final class StatisticsViewModel {
 extension StatisticsViewModel {
         
     func fetchViewModels() -> [StatisticsForSelectedMonthViewModel] {
-        let entries = EntryManager.shared.entries
+        let entries = entryRepo.entries
         guard !entries.isEmpty else { return [] }
         
         var viewModels: [StatisticsForSelectedMonthViewModel] = []
         var uniqueMonthsSet: Set<DateComponents> = Set()
         
         for entry in entries {
-            let dateComponents = Calendar.current.dateComponents([.year, .month], from: entry.date)
-            uniqueMonthsSet.insert(dateComponents)
+            if let date = entry.date {
+                let dateComponents = Calendar.current.dateComponents([.year, .month], from: date)
+                uniqueMonthsSet.insert(dateComponents)
+            }
         }
         
         let months = Array(uniqueMonthsSet).sorted { (lhs, rhs) -> Bool in

@@ -7,49 +7,40 @@
 
 import Foundation
 
-@Observable
-final class CreateNewEntryViewModel {
-    let viewContext = PersistenceController.shared.container.viewContext
+final class CreateNewEntryViewModel: ObservableObject {
+    let entryRepo: EntryRepository = .shared
     
-    var price: String = ""
-    var mileage: String = ""
-    var litres: String = ""
-    var date: Date = .now
+    @Published var price: String = ""
+    @Published var mileage: String = ""
+    @Published var litres: String = ""
+    @Published var date: Date = .now
     
-    var presentingConfirmationDialog: Bool = false
-    var showAlertEssentialPro: Bool = false
-    
-    var entries: [EntryEntity] = []
-    
+    @Published var presentingConfirmationDialog: Bool = false
+    @Published var showAlertEssentialPro: Bool = false
 }
 
 extension CreateNewEntryViewModel {
     
-    func createNewEntry() {
-        let newEntry = EntryEntity(context: viewContext)
-        newEntry.id = UUID()
-        newEntry.price = price.convertToDouble()
-        newEntry.mileage = Int64(mileage.convertToInt())
-        newEntry.litres = litres.convertToDouble()
-        newEntry.date = date
-        
-        PersistenceController.shared.saveContext()
-        
-        EntryManager.shared.fetchEntries()
-    }
-    
-}
-
-extension CreateNewEntryViewModel {
-    
-    func fetchEntries() {
-        let request = EntryEntity.fetchRequest()
-        do {
-            self.entries = try viewContext.fetch(request)
-        } catch {
-            print("⚠️ Fail to fetch entries : \(error.localizedDescription)")
+    func createNewEntry() async {
+        if let body = generateBody() {
+            await entryRepo.createEntry(body: body)
         }
     }
+    
+    func generateBody() -> EntryBody? {
+        if isEntryValid() {
+            return .init(
+                price: price.toDouble(),
+                mileage: mileage.convertToInt(),
+                liters: litres.toDouble(),
+                dateIso: date.toISO8601String()
+            )
+        } else { return nil }
+    }
+    
+}
+
+extension CreateNewEntryViewModel {
     
     func isEntryInCreation() -> Bool {
         if price.convertToDouble() != 0 || mileage.convertToInt() != 0 || litres.convertToDouble() != 0 {
@@ -59,9 +50,7 @@ extension CreateNewEntryViewModel {
     }
     
     func isEntryValid() -> Bool {
-        if entries.isEmpty { fetchEntries() }
-        
-        if let lastEntry = entries.sorted(by: { $0.date > $1.date }).first {
+        if let lastEntry = entryRepo.entries.sorted(by: { $0.date ?? .now > $1.date ?? .now }).first {
             if price.convertToDouble() != 0
                 && litres.convertToDouble() != 0
                 && mileage.convertToInt() != 0

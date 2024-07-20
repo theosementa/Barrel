@@ -9,27 +9,29 @@ import Foundation
 
 @Observable
 final class HistoryViewModel {
+    let entryRepo: EntryRepository = .shared
     
-    var entriesByMonth: [DateComponents : [EntryEntity]] = [:]
+    var entriesByMonth: [DateComponents : [EntryResponse]] = [:]
     
 }
 
 extension HistoryViewModel {
     
-    func sortEntriesByMonth() {
-        EntryManager.shared.fetchEntries()
-        let entries = EntryManager.shared.entries
+    func sortEntriesByMonth() async {
+        await entryRepo.fetchEntries()
         
         entriesByMonth = [:]
         
-        for entry in entries {
-            let month = Calendar.current.dateComponents([.year, .month], from: entry.date)
-                        
-            if var entriesForMonth = entriesByMonth[month] {
-                entriesForMonth.append(entry)
-                entriesByMonth[month] = entriesForMonth
-            } else {
-                entriesByMonth[month] = [entry]
+        for entry in entryRepo.entries {
+            if let date = entry.date {
+                let month = Calendar.current.dateComponents([.year, .month], from: date)
+                
+                if var entriesForMonth = entriesByMonth[month] {
+                    entriesForMonth.append(entry)
+                    entriesByMonth[month] = entriesForMonth
+                } else {
+                    entriesByMonth[month] = [entry]
+                }
             }
         }
     }

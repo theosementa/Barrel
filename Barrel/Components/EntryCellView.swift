@@ -10,10 +10,10 @@ import SwiftUI
 struct EntryCellView: View {
     
     // Builder
-    @ObservedObject var entry: EntryEntity
+    @ObservedObject var entry: EntryResponse
     
     // Environment
-    @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject private var entryRepo: EntryRepository
     
     // MARK: -
     var body: some View {
@@ -31,9 +31,11 @@ struct EntryCellView: View {
             VStack(spacing: 6) {
                 HStack(alignment: .bottom) {
                     let price = entry.price.formatWith(num: 2) + "€"
-                    let litres = entry.litres.formatWith(num: 2) + "L"
-                    Text(price + " / " + litres)
-                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                    if let liters = entry.liters {
+                        let litres = liters.formatWith(num: 2) + "L"
+                        Text(price + " / " + litres)
+                            .font(.system(size: 18, weight: .bold, design: .rounded))
+                    }
                     
                     Spacer()
                     
@@ -47,10 +49,8 @@ struct EntryCellView: View {
                     
                     Spacer()
                     
-                    if !entry.isFault {
-                        Text(entry.date.formatted(date: .numeric, time: .omitted))
-                            .foregroundStyle(Color(uiColor: .lightGray))
-                    }
+                    Text(entry.dateIso.isoToDateString() ?? "")
+                        .foregroundStyle(Color(uiColor: .lightGray))
                 }
                 .font(.system(size: 16, weight: .medium, design: .rounded))
             }
@@ -58,11 +58,9 @@ struct EntryCellView: View {
         .backgroundComponent()
         .contextMenu {
             Button(role: .destructive, action: {
-                DispatchQueue.main.async {
-                    viewContext.delete(entry)
-                    EntryManager.shared.fetchEntries()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                        try? viewContext.save()
+                Task {
+                    if let entryID = entry.id {
+                        await entryRepo.deleteEntry(entryID: entryID)
                     }
                 }
             }, label: {
@@ -77,7 +75,7 @@ struct EntryCellView: View {
 
 // MARK: - Preview
 #Preview {
-    EntryCellView(entry: EntryEntity.preview)
+    EntryCellView(entry: EntryResponse.preview)
         .preferredColorScheme(.dark)
         .padding()
 }

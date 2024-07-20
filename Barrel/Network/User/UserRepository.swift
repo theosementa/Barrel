@@ -25,6 +25,8 @@ extension UserRepository {
                 responseModel: UserResponse.self
             )
             
+            print("🔥 USER : \(user.token)")
+            
             if let token = user.token {
                 KeychainManager.shared.setItemToKeychain(newValue: token, service: .token)
             }

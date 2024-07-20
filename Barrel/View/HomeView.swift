@@ -122,9 +122,7 @@ struct HomeView: View {
         .navigationBarTitleDisplayMode(.inline)
         .background(Color.Apple.background.ignoresSafeArea())
         .overlay(alignment: .bottom) {
-            Button(action: {
-                router.presentCreateNewEntry()
-            }, label: {
+            Button(action: { router.presentCreateNewEntry() }, label: {
                 Circle()
                     .frame(width: 58, height: 58)
                     .foregroundStyle(Color.customYellow)

@@ -27,6 +27,11 @@ struct BarrelApp: App {
             .environmentObject(entryRepo)
             .environmentObject(userRepo)
             .task {
+                if let token = KeychainManager.shared.retrieveItem(service: .token) {
+                    print("🔥 TOKEN : \(token)")
+                } else {
+                    await userRepo.register()
+                }
                 await entryRepo.fetchEntries()
             }
         }

@@ -14,4 +14,10 @@ extension Date {
         return self.month.capitalized + " " + year
     }
     
+    func toISO8601String() -> String {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter.string(from: self)
+    }
+    
 }

@@ -60,3 +60,32 @@ class EntryResponse: Codable, Identifiable, ObservableObject, Equatable, Hashabl
         try container.encode(dateIso, forKey: .dateIso)
     }
 }
+
+extension EntryResponse {
+    
+    var date: Date? {
+        return self.dateIso.isoToDate()
+    }
+    
+    var priceOfLitre: Double {
+        if let liters, liters != 0 {
+            return price / liters
+        } else { return 0 }
+    }
+    
+}
+
+// MARK: - Preview
+extension EntryResponse {
+    
+    static var preview: EntryResponse {
+        return .init(
+            id: 0,
+            price: 65.2,
+            mileage: 24_021,
+            liters: 45.1,
+            dateIso: "2024-06-12T12:34:56.789Z"
+        )
+    }
+    
+}

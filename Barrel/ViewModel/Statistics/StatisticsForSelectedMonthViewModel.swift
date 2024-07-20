@@ -9,6 +9,7 @@ import Foundation
 
 @Observable
 final class StatisticsForSelectedMonthViewModel: Hashable {
+    private let entryRepo: EntryRepository = .shared
     
     // Builder
     var comp: DateComponents
@@ -25,21 +26,18 @@ final class StatisticsForSelectedMonthViewModel: Hashable {
     // init
     init(comp: DateComponents) {
         self.comp = comp
-        if EntryManager.shared.entries.count == 0 {
-            EntryManager.shared.fetchEntries()
-        }
     }
     
-    var entriesOfTheMonth: [EntryEntity] {
+    var entriesOfTheMonth: [EntryResponse] {
         guard let date = Calendar.current.date(from: comp) else {
             return []
         }
         
-        let entries = EntryManager.shared.entries
+        let entries = entryRepo.entries
         
         return entries
-            .filter { Calendar.current.isDate($0.date, equalTo: date, toGranularity: .month) }
-            .sorted(by: { $0.date > $1.date })
+            .filter { Calendar.current.isDate($0.date ?? .now, equalTo: date, toGranularity: .month) }
+            .sorted(by: { $0.date ?? .now > $1.date ?? .now })
     }
     
     var prices: [Double] {
@@ -50,7 +48,7 @@ final class StatisticsForSelectedMonthViewModel: Hashable {
     
     var litres: [Double] {
         return entriesOfTheMonth
-            .map { $0.litres }
+            .map { $0.liters ?? 0 }
     }
     
     var mileages: [Int] {

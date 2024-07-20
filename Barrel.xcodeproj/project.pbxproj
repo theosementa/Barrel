@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D90B794A2BD67C1300E1344D /* EntryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B79482BD67C1300E1344D /* EntryEntity.swift */; };
 		D90B794D2BD67CA400E1344D /* BackgroundComponentViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B794C2BD67CA400E1344D /* BackgroundComponentViewModifier.swift */; };
 		D90B794F2BD67CBE00E1344D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90B794E2BD67CBE00E1344D /* Colors.xcassets */; };
 		D90B79532BD67D7800E1344D /* DashboardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B79522BD67D7800E1344D /* DashboardCellView.swift */; };
@@ -51,7 +50,6 @@
 		D978EF5A2BD6CAA400A5513F /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978EF592BD6CAA400A5513F /* CustomTextFieldView.swift */; };
 		D978EF5C2BD6CC0600A5513F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978EF5B2BD6CC0600A5513F /* String.swift */; };
 		D978EF5F2BD6CDE700A5513F /* ToolbarDismissKeyboardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978EF5E2BD6CDE700A5513F /* ToolbarDismissKeyboardButtonView.swift */; };
-		D978EF612BD6D15B00A5513F /* EntryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978EF602BD6D15B00A5513F /* EntryManager.swift */; };
 		D978EF632BD6D4BB00A5513F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978EF622BD6D4BB00A5513F /* StatisticsView.swift */; };
 		D978EF652BD6D4C300A5513F /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978EF642BD6D4C300A5513F /* HistoryView.swift */; };
 		D978EF672BD6D5C900A5513F /* StatisticCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D978EF662BD6D5C900A5513F /* StatisticCellView.swift */; };
@@ -81,7 +79,6 @@
 /* Begin PBXFileReference section */
 		D90B79452BD67B7E00E1344D /* Barrel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Barrel.entitlements; sourceTree = "<group>"; };
 		D90B79462BD67B8C00E1344D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D90B79482BD67C1300E1344D /* EntryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEntity.swift; sourceTree = "<group>"; };
 		D90B794C2BD67CA400E1344D /* BackgroundComponentViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundComponentViewModifier.swift; sourceTree = "<group>"; };
 		D90B794E2BD67CBE00E1344D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D90B79522BD67D7800E1344D /* DashboardCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCellView.swift; sourceTree = "<group>"; };
@@ -126,7 +123,6 @@
 		D978EF592BD6CAA400A5513F /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		D978EF5B2BD6CC0600A5513F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D978EF5E2BD6CDE700A5513F /* ToolbarDismissKeyboardButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarDismissKeyboardButtonView.swift; sourceTree = "<group>"; };
-		D978EF602BD6D15B00A5513F /* EntryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryManager.swift; sourceTree = "<group>"; };
 		D978EF622BD6D4BB00A5513F /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		D978EF642BD6D4C300A5513F /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		D978EF662BD6D5C900A5513F /* StatisticCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticCellView.swift; sourceTree = "<group>"; };
@@ -384,8 +380,6 @@
 			children = (
 				D967033F2BD6782800BD2CEF /* Persistence.swift */,
 				D96703412BD6782800BD2CEF /* Barrel.xcdatamodeld */,
-				D90B79482BD67C1300E1344D /* EntryEntity.swift */,
-				D978EF602BD6D15B00A5513F /* EntryManager.swift */,
 				D9AE78812BDCD579004E67D4 /* VehicleSheetEntity.swift */,
 				D9AE78882BDCDB72004E67D4 /* VehicleSheetManager.swift */,
 			);
@@ -559,7 +553,6 @@
 				D90B79532BD67D7800E1344D /* DashboardCellView.swift in Sources */,
 				D93DF0592C4A953300C26075 /* KeychainManager.swift in Sources */,
 				D955F7872C0314000007871F /* EstimationCell.swift in Sources */,
-				D90B794A2BD67C1300E1344D /* EntryEntity.swift in Sources */,
 				D93DF0712C4A9CB100C26075 /* Banner.swift in Sources */,
 				D9A47FA42BE23486002E0C7C /* StatsSummaryOfTheYearView.swift in Sources */,
 				D93DF0572C4A953300C26075 /* NetworkService.swift in Sources */,
@@ -573,7 +566,6 @@
 				D9A47FA82BE239D4002E0C7C /* StatsTotalView.swift in Sources */,
 				D92820972BD7C93A0069F795 /* HistoryViewModel.swift in Sources */,
 				D978EF4F2BD6C5EF00A5513F /* Double.swift in Sources */,
-				D978EF612BD6D15B00A5513F /* EntryManager.swift in Sources */,
 				D93DF0552C4A953300C26075 /* NetworkConstant.swift in Sources */,
 				D978EF692BD6DDFD00A5513F /* StatisticsViewModel.swift in Sources */,
 				D92820992BD7D1D30069F795 /* StatisticsForSelectedMonthView.swift in Sources */,

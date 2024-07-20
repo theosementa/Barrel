@@ -54,8 +54,8 @@ struct HistoryView: View {
                 })
             }
         }
-        .onAppear {
-            viewModel.sortEntriesByMonth()
+        .task {
+            await viewModel.sortEntriesByMonth()
         }
     } // End body
 } // End struct

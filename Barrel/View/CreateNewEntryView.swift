@@ -10,7 +10,8 @@ import SwiftUI
 struct CreateNewEntryView: View {
     
     // Custom
-    @State private var viewModel = CreateNewEntryViewModel()
+    @StateObject private var viewModel = CreateNewEntryViewModel()
+    @EnvironmentObject private var entryRepo: EntryRepository
     
     // Environment
     @Environment(\.dismiss) private var dismiss
@@ -38,7 +39,7 @@ struct CreateNewEntryView: View {
                         text: $viewModel.mileage,
                         placeholder: "Kilomètrage (ex: 68 072)",
                         unit: "KM",
-                        lastMileage: Int(viewModel.entries.sorted(by: { $0.date > $1.date }).first?.mileage ?? 0)
+                        lastMileage: Int(entryRepo.entries.sorted(by: { $0.date ?? .now > $1.date ?? .now }).first?.mileage ?? 0)
                     )
                     .keyboardType(.numberPad)
                     
@@ -67,9 +68,7 @@ struct CreateNewEntryView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
+                    Button { dismiss() } label: {
                         Text("Annuler")
                             .foregroundStyle(Color.customYellow)
                     }
@@ -77,8 +76,10 @@ struct CreateNewEntryView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        viewModel.createNewEntry()
-                        dismiss()
+                        Task {
+                            await viewModel.createNewEntry()
+                            dismiss()
+                        }
                     } label: {
                         Text("Enregistrer")
                             .fontWeight(.bold)
@@ -97,9 +98,6 @@ struct CreateNewEntryView: View {
         .confirmationDialog("", isPresented: $viewModel.presentingConfirmationDialog) {
             Button("Annuler les changements", role: .destructive, action: { dismiss() })
             Button("Retour", role: .cancel, action: { })
-        }
-        .onAppear {
-            viewModel.fetchEntries()
         }
     } // End body
 } // End struct

@@ -10,11 +10,11 @@ import Foundation
 @Observable
 final class StatsSummaryOfTheYearViewModel {
     
-    var entriesOfTheYear: [EntryEntity] {
-        let entries = EntryManager.shared.entries
+    var entriesOfTheYear: [EntryResponse] {
+        let entries = EntryRepository.shared.entries
         
         return entries
-            .filter { Calendar.current.isDate($0.date, equalTo: Date(), toGranularity: .year) }
+            .filter { Calendar.current.isDate($0.date ?? .now, equalTo: Date(), toGranularity: .year) }
     }
     
     var prices: [Double] {
@@ -25,7 +25,7 @@ final class StatsSummaryOfTheYearViewModel {
     
     var litres: [Double] {
         return entriesOfTheYear
-            .map { $0.litres }
+            .map { $0.liters ?? 0 }
     }
     
     var mileages: [Int] {

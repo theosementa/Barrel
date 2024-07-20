@@ -19,7 +19,7 @@ struct StatsChartView: View {
     var subTitle: String
     
     var chartType: ChartType
-    var entries: [EntryEntity]
+    var entries: [EntryResponse]
     
     var minValue: Double
     var maxValue: Double
@@ -32,7 +32,7 @@ struct StatsChartView: View {
                 Chart {
                     ForEach(entries) { entry in
                         LineMark(
-                            x: .value("date", entry.date),
+                            x: .value("date", entry.date ?? .now),
                             y: .value("yValue", yValue(entry: entry))
                         )
                     }
@@ -46,7 +46,7 @@ struct StatsChartView: View {
     } // End body
     
     // MARK: - FUNCTIONS
-    func yValue(entry: EntryEntity) -> Double {
+    func yValue(entry: EntryResponse) -> Double {
         switch chartType {
         case .expenses:
             return entry.price

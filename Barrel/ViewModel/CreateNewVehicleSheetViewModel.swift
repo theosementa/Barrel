@@ -95,10 +95,10 @@ extension CreateNewVehicleSheetViewModel {
             newVehicleSheet.brand = brand
             newVehicleSheet.model = model
             
-            newVehicleSheet.power = Int16(power.convertToInt())
-            newVehicleSheet.fiscalPower = Int16(fiscalPower.convertToInt())
-            newVehicleSheet.torque = Int16(torque.convertToInt())
-            newVehicleSheet.tankCapacity = Int16(tankCapacity.convertToInt())
+            newVehicleSheet.power = Int16(power.toInt())
+            newVehicleSheet.fiscalPower = Int16(fiscalPower.toInt())
+            newVehicleSheet.torque = Int16(torque.toInt())
+            newVehicleSheet.tankCapacity = Int16(tankCapacity.toInt())
             
             newVehicleSheet.vin = vin
             newVehicleSheet.immatriculation = immatriculation
@@ -115,10 +115,10 @@ extension CreateNewVehicleSheetViewModel {
         vehicleSheet.brand = brand
         vehicleSheet.model = model
         
-        vehicleSheet.power = Int16(power.convertToInt())
-        vehicleSheet.fiscalPower = Int16(fiscalPower.convertToInt())
-        vehicleSheet.torque = Int16(torque.convertToInt())
-        vehicleSheet.tankCapacity = Int16(tankCapacity.convertToInt())
+        vehicleSheet.power = Int16(power.toInt())
+        vehicleSheet.fiscalPower = Int16(fiscalPower.toInt())
+        vehicleSheet.torque = Int16(torque.toInt())
+        vehicleSheet.tankCapacity = Int16(tankCapacity.toInt())
         
         vehicleSheet.vin = vin
         vehicleSheet.immatriculation = immatriculation

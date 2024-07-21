@@ -31,7 +31,7 @@ extension CreateNewEntryViewModel {
         if isEntryValid() {
             return .init(
                 price: price.toDouble(),
-                mileage: mileage.convertToInt(),
+                mileage: mileage.toInt(),
                 liters: litres.toDouble(),
                 dateIso: date.toISO8601String()
             )
@@ -43,7 +43,7 @@ extension CreateNewEntryViewModel {
 extension CreateNewEntryViewModel {
     
     func isEntryInCreation() -> Bool {
-        if price.convertToDouble() != 0 || mileage.convertToInt() != 0 || litres.convertToDouble() != 0 {
+        if price.toDouble() != 0 || mileage.toInt() != 0 || litres.toDouble() != 0 {
             return true
         }
         return false
@@ -51,14 +51,14 @@ extension CreateNewEntryViewModel {
     
     func isEntryValid() -> Bool {
         if let lastEntry = entryRepo.entries.sorted(by: { $0.date ?? .now > $1.date ?? .now }).first {
-            if price.convertToDouble() != 0
-                && litres.convertToDouble() != 0
-                && mileage.convertToInt() != 0
-                && mileage.convertToInt() > lastEntry.mileage {
+            if price.toDouble() != 0
+                && litres.toDouble() != 0
+                && mileage.toInt() != 0
+                && mileage.toInt() > lastEntry.mileage {
                 return true
             }
         } else {
-            if price.convertToDouble() != 0 && litres.convertToDouble() != 0 && mileage.convertToInt() != 0 {
+            if price.toDouble() != 0 && litres.toDouble() != 0 && mileage.toInt() != 0 {
                 return true
             }
         }

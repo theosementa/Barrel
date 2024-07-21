@@ -9,12 +9,16 @@ import Foundation
 
 extension String {
     
-    func convertToDouble() -> Double {
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+    
+    func toDouble() -> Double {
         let stringFormated = self.replacingOccurrences(of: ",", with: ".")
         return Double(stringFormated) ?? 0
     }
     
-    func convertToInt() -> Int {
+    func toInt() -> Int {
         return Int(self) ?? 0
     }
     

@@ -36,6 +36,10 @@
 		D93DF06F2C4A9C9400C26075 /* BannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93DF06E2C4A9C9400C26075 /* BannerManager.swift */; };
 		D93DF0712C4A9CB100C26075 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93DF0702C4A9CB100C26075 /* Banner.swift */; };
 		D93DF0742C4A9EB000C26075 /* EntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93DF0732C4A9EB000C26075 /* EntryRepository.swift */; };
+		D93DF0762C4B9B4A00C26075 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93DF0752C4B9B4A00C26075 /* Color+Extensions.swift */; };
+		D945C0542C4CD0AC00C8E51A /* InteractiveDismissableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945C0532C4CD0AC00C8E51A /* InteractiveDismissableView.swift */; };
+		D945C0562C4CD23200C8E51A /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945C0552C4CD23200C8E51A /* AppManager.swift */; };
+		D945C05A2C4CD3CA00C8E51A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945C0592C4CD3CA00C8E51A /* SplashScreenView.swift */; };
 		D955F7872C0314000007871F /* EstimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D955F7862C0314000007871F /* EstimationCell.swift */; };
 		D96703372BD6782700BD2CEF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96703362BD6782700BD2CEF /* App.swift */; };
 		D967033B2BD6782800BD2CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D967033A2BD6782800BD2CEF /* Assets.xcassets */; };
@@ -71,9 +75,8 @@
 		D9AE788B2BDCDC2B004E67D4 /* VehicleSheetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE788A2BDCDC2B004E67D4 /* VehicleSheetCellView.swift */; };
 		D9AE788D2BDCF2DF004E67D4 /* TechnicalControlCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE788C2BDCF2DF004E67D4 /* TechnicalControlCellView.swift */; };
 		D9AE788F2BDE2EFD004E67D4 /* CustomSegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE788E2BDE2EFD004E67D4 /* CustomSegmentedControlView.swift */; };
-		D9AE78912BDE32B0004E67D4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE78902BDE32B0004E67D4 /* Date.swift */; };
+		D9AE78912BDE32B0004E67D4 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE78902BDE32B0004E67D4 /* Date+Extensions.swift */; };
 		D9EE233B2C03B510003A24AD /* DateComponents+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EE233A2C03B510003A24AD /* DateComponents+Extensions.swift */; };
-		D9EE23512C0504E4003A24AD /* TheoKit in Frameworks */ = {isa = PBXBuildFile; productRef = D9EE23502C0504E4003A24AD /* TheoKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +111,10 @@
 		D93DF06E2C4A9C9400C26075 /* BannerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerManager.swift; sourceTree = "<group>"; };
 		D93DF0702C4A9CB100C26075 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		D93DF0732C4A9EB000C26075 /* EntryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRepository.swift; sourceTree = "<group>"; };
+		D93DF0752C4B9B4A00C26075 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		D945C0532C4CD0AC00C8E51A /* InteractiveDismissableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveDismissableView.swift; sourceTree = "<group>"; };
+		D945C0552C4CD23200C8E51A /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		D945C0592C4CD3CA00C8E51A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		D955F7862C0314000007871F /* EstimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimationCell.swift; sourceTree = "<group>"; };
 		D96703332BD6782700BD2CEF /* Barrel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96703362BD6782700BD2CEF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -144,7 +151,7 @@
 		D9AE788A2BDCDC2B004E67D4 /* VehicleSheetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleSheetCellView.swift; sourceTree = "<group>"; };
 		D9AE788C2BDCF2DF004E67D4 /* TechnicalControlCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalControlCellView.swift; sourceTree = "<group>"; };
 		D9AE788E2BDE2EFD004E67D4 /* CustomSegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControlView.swift; sourceTree = "<group>"; };
-		D9AE78902BDE32B0004E67D4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		D9AE78902BDE32B0004E67D4 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		D9EE233A2C03B510003A24AD /* DateComponents+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponents+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9EE23512C0504E4003A24AD /* TheoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				D93DF03D2C4A953300C26075 /* KeychainManager.swift */,
+				D945C0552C4CD23200C8E51A /* AppManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -297,6 +304,14 @@
 				D93DF0702C4A9CB100C26075 /* Banner.swift */,
 			);
 			path = Banner;
+			sourceTree = "<group>";
+		};
+		D945C0522C4CD09D00C8E51A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D945C0532C4CD0AC00C8E51A /* InteractiveDismissableView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		D955F7882C0317C90007871F /* Estimations */ = {
@@ -359,6 +374,7 @@
 				D978EF642BD6D4C300A5513F /* HistoryView.swift */,
 				D92820982BD7D1D30069F795 /* StatisticsForSelectedMonthView.swift */,
 				D9AE787C2BDCCFEE004E67D4 /* CreateNewVehicleSheetView.swift */,
+				D945C0592C4CD3CA00C8E51A /* SplashScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,6 +384,7 @@
 			children = (
 				D90B79502BD67CDA00E1344D /* Assets */,
 				D978EF4D2BD6C5E300A5513F /* Extensions */,
+				D945C0522C4CD09D00C8E51A /* Helper */,
 				D93DF06D2C4A9C8600C26075 /* Managers */,
 				D90B794B2BD67C6600E1344D /* Modifiers */,
 				D90B795B2BD6826A00E1344D /* Navigation */,
@@ -389,10 +406,11 @@
 		D978EF4D2BD6C5E300A5513F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D9AE78902BDE32B0004E67D4 /* Date.swift */,
+				D9AE78902BDE32B0004E67D4 /* Date+Extensions.swift */,
 				D9EE233A2C03B510003A24AD /* DateComponents+Extensions.swift */,
 				D978EF4E2BD6C5EF00A5513F /* Double.swift */,
 				D978EF5B2BD6CC0600A5513F /* String.swift */,
+				D93DF0752C4B9B4A00C26075 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -452,7 +470,6 @@
 			);
 			name = Barrel;
 			packageProductDependencies = (
-				D9EE23502C0504E4003A24AD /* TheoKit */,
 			);
 			productName = Barrel;
 			productReference = D96703332BD6782700BD2CEF /* Barrel.app */;
@@ -483,7 +500,6 @@
 			);
 			mainGroup = D967032A2BD6782700BD2CEF;
 			packageReferences = (
-				D9EE234F2C0504E4003A24AD /* XCRemoteSwiftPackageReference "TheoKit" */,
 			);
 			productRefGroup = D96703342BD6782700BD2CEF /* Products */;
 			projectDirPath = "";
@@ -520,9 +536,12 @@
 				D93DF06F2C4A9C9400C26075 /* BannerManager.swift in Sources */,
 				D93DF0532C4A953300C26075 /* APIRequestBuilder.swift in Sources */,
 				D9AE787F2BDCD024004E67D4 /* CreateNewVehicleSheetViewModel.swift in Sources */,
+				D945C0542C4CD0AC00C8E51A /* InteractiveDismissableView.swift in Sources */,
 				D978EF532BD6C7A600A5513F /* CreateNewEntryViewModel.swift in Sources */,
 				D9AE78892BDCDB72004E67D4 /* VehicleSheetManager.swift in Sources */,
 				D978EF632BD6D4BB00A5513F /* StatisticsView.swift in Sources */,
+				D93DF0762C4B9B4A00C26075 /* Color+Extensions.swift in Sources */,
+				D945C05A2C4CD3CA00C8E51A /* SplashScreenView.swift in Sources */,
 				D93DF0652C4A95E600C26075 /* Banner+Extensions.swift in Sources */,
 				D90B79612BD6848D00E1344D /* MyVehiculeView.swift in Sources */,
 				D9AE787D2BDCCFEE004E67D4 /* CreateNewVehicleSheetView.swift in Sources */,
@@ -533,7 +552,7 @@
 				D9EE233B2C03B510003A24AD /* DateComponents+Extensions.swift in Sources */,
 				D978EF5F2BD6CDE700A5513F /* ToolbarDismissKeyboardButtonView.swift in Sources */,
 				D9AE78872BDCDB47004E67D4 /* MyVehicleViewModel.swift in Sources */,
-				D9AE78912BDE32B0004E67D4 /* Date.swift in Sources */,
+				D9AE78912BDE32B0004E67D4 /* Date+Extensions.swift in Sources */,
 				D928209D2BD7D2E00069F795 /* StatisticsForSelectedMonthViewModel.swift in Sources */,
 				D978EF672BD6D5C900A5513F /* StatisticCellView.swift in Sources */,
 				D93DF0622C4A953300C26075 /* UserAPIRequester.swift in Sources */,
@@ -561,6 +580,7 @@
 				D93DF0682C4A96FA00C26075 /* EntryResponse.swift in Sources */,
 				D9AE78832BDCD579004E67D4 /* VehicleSheetEntity.swift in Sources */,
 				D96703432BD6782800BD2CEF /* Barrel.xcdatamodeld in Sources */,
+				D945C0562C4CD23200C8E51A /* AppManager.swift in Sources */,
 				D9AE788F2BDE2EFD004E67D4 /* CustomSegmentedControlView.swift in Sources */,
 				D9AE78852BDCD76F004E67D4 /* EmptyDataView.swift in Sources */,
 				D9A47FA82BE239D4002E0C7C /* StatsTotalView.swift in Sources */,
@@ -798,25 +818,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D9EE234F2C0504E4003A24AD /* XCRemoteSwiftPackageReference "TheoKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/theosementa7/TheoKit";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D9EE23502C0504E4003A24AD /* TheoKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D9EE234F2C0504E4003A24AD /* XCRemoteSwiftPackageReference "TheoKit" */;
-			productName = TheoKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D96703412BD6782800BD2CEF /* Barrel.xcdatamodeld */ = {

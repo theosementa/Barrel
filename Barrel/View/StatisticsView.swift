@@ -85,7 +85,7 @@ struct StatisticsView: View {
                                 if let selectedViewModel = viewModel.selectedViewModel {
                                     Text(selectedViewModel.comp.toMonthAndYear())
                                 } else {
-                                    Text(Date().toMonthAndYear())
+                                    Text(Date().formatted(Date.FormatStyle().month(.wide).year()).capitalized)
                                 }
                             }
                             .font(.system(size: 14, weight: .medium))

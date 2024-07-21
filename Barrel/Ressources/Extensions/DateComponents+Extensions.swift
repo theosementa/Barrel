@@ -9,6 +9,10 @@ import Foundation
 
 extension DateComponents {
     
+    public func toDate() -> Date? {
+        return Calendar.current.date(from: self)
+    }
+    
     func toMonth() -> String {
         if let month {
             let monthString = Calendar.current.monthSymbols[month - 1]

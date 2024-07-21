@@ -1,0 +1,171 @@
+//
+//  Date.swift
+//  Barrel
+//
+//  Created by KaayZenn on 28/04/2024.
+//
+
+import Foundation
+
+extension Date {
+    
+    var month: String {
+        return self.formatted(Date.FormatStyle().month())
+    }
+    
+    var year: String {
+        return self.formatted(Date.FormatStyle().year())
+    }
+    
+    func toISO8601String() -> String {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter.string(from: self)
+    }
+    
+}
+
+extension Date {
+    
+    /// Calculate the number of days between two dates.
+    /// - Parameter to: The end date for the calculation.
+    /// - Returns: The number of days between the current date and the given date.
+    public func daysBetween(to date: Date) -> Int? {
+        let calendar = Calendar.current
+        let startOfCurrentDate = calendar.startOfDay(for: self)
+        let startOfOtherDate = calendar.startOfDay(for: date)
+        
+        let components = calendar.dateComponents([.day], from: startOfCurrentDate, to: startOfOtherDate)
+        return components.day
+    }
+    
+}
+
+extension Date {
+    var dayMonthAbbreviated: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "E dd MMM"
+        formatter.locale = Locale.current
+        return formatter.string(from: self).replacingOccurrences(of: ".", with: "").capitalized
+    }
+    
+    static var iPhoneReleaseDate: Date? {
+        var components = DateComponents()
+        components.year = 2007
+        components.month = 6
+        components.day = 29
+        components.hour = 9
+        components.minute = 41
+        components.timeZone = TimeZone(abbreviation: "PST")
+        
+        return Calendar.current.date(from: components)
+    }
+    
+}
+
+// MARK: - Week
+extension Date {
+    
+    var startOfWeek: Date? {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)
+        return calendar.date(from: components)
+    }
+    
+    var endOfWeek: Date? {
+        let calendar = Calendar.current
+        guard let startOfWeek = self.startOfWeek else { return nil }
+        return calendar.date(byAdding: DateComponents(day: 7, second: -1), to: startOfWeek)
+    }
+    
+    var oneWeekAgo: Date {
+        return Calendar.current.date(byAdding: .weekOfYear, value: -1, to: self)!
+    }
+
+    var inOneWeek: Date {
+        return Calendar.current.date(byAdding: .weekOfYear, value: 1, to: self)!
+    }
+    
+}
+
+// MARK: - Month
+extension Date {
+    
+    var startOfMonth: Date? {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month], from: self)
+        return calendar.date(from: components)
+    }
+    
+    var endOfMonth: Date? {
+        let calendar = Calendar.current
+        guard let startOfMonth = self.startOfMonth else { return nil }
+        return calendar.date(byAdding: DateComponents(month: 1, second: -1), to: startOfMonth)
+    }
+    
+    var oneMonthAgo: Date {
+        return Calendar.current.date(byAdding: .month, value: -1, to: self)!
+    }
+
+    var inOneMonth: Date {
+        return Calendar.current.date(byAdding: .month, value: 1, to: self)!
+    }
+    
+}
+
+// MARK: - Year
+extension Date {
+    
+    var startOfYear: Date? {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year], from: self)
+        return calendar.date(from: components)
+    }
+    
+    var endOfYear: Date? {
+        let calendar = Calendar.current
+        guard let startOfYear = self.startOfYear else { return nil }
+        return calendar.date(byAdding: DateComponents(year: 1, second: -1), to: startOfYear)
+    }
+    
+    var inOneYear: Date {
+        return Calendar.current.date(byAdding: .year, value: 1, to: self)!
+    }
+    
+    var oneYearAgo: Date {
+        return Calendar.current.date(byAdding: .year, value: -1, to: self)!
+    }
+}
+
+// MARK: - Custom with Period
+//extension Date {
+//    
+//    func newDateByPeriodInPast(_ period: Period, _ status: PeriodStatus) -> Date {
+//        let isStart = status == .start
+//        switch period {
+//        case .week:
+//            return isStart ? (self.oneWeekAgo.startOfWeek ?? .now) : (self.oneWeekAgo.endOfWeek ?? .now)
+//        case .month:
+//            return isStart ? (self.oneMonthAgo.startOfMonth ?? .now) : (self.oneMonthAgo.endOfMonth ?? .now)
+//        case .year:
+//            return isStart ? (self.oneYearAgo.startOfYear ?? .now) : (self.oneYearAgo.endOfYear ?? .now)
+//        case .total:
+//            return Date.iPhoneReleaseDate ?? .now
+//        }
+//    }
+//    
+//    func newDateByPeriodInFuture(_ period: Period, _ status: PeriodStatus) -> Date {
+//        let isStart = status == .start
+//        switch period {
+//        case .week:
+//            return isStart ? (self.inOneWeek.startOfWeek ?? .now) : (self.inOneWeek.endOfWeek ?? .now)
+//        case .month:
+//            return isStart ? (self.inOneMonth.startOfMonth ?? .now) : (self.inOneMonth.endOfMonth ?? .now)
+//        case .year:
+//            return isStart ? (self.inOneYear.startOfYear ?? .now) : (self.inOneYear.endOfYear ?? .now)
+//        case .total:
+//            return .now
+//        }
+//    }
+//    
+//}

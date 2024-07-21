@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import TheoKit
 
 enum BannerStyle {
     case neutral
@@ -58,8 +57,6 @@ struct BannerModifier: ViewModifier {
     // MARK: Functions
     private func showBanner() {
         guard let banner = banner else { return }
-
-        VibrationManager.shared.doVibration()
 
         if banner.duration > 0 {
             workItem?.cancel()

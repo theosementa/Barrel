@@ -25,6 +25,8 @@ extension EntryRepository {
             
             self.entries = entries
                 .sorted(by: { $0.date ?? .now > $1.date ?? .now })
+            
+            AppManager.shared.state = .success
         } catch let error {
             if let networkError = error as? NetworkError {
                 BannerManager.shared.banner = networkError.banner
@@ -113,7 +115,7 @@ extension EntryRepository {
         guard let firstEntry = entries.last else { return 0 }
         guard let firstEntryDate = firstEntry.date else { return 0 }
         guard let daysSinceStart = firstEntryDate.daysBetween(to: Date()) else { return 0 }
-        guard let lastDayOfTheYear = Date().lastDayOfYear() else { return 0 }
+        guard let lastDayOfTheYear = Date().endOfYear else { return 0 }
         guard let daysToEndOfYear = Date().daysBetween(to: lastDayOfTheYear) else { return 0 }
         
         guard daysSinceStart > 0 else { return 0 }

@@ -97,7 +97,7 @@ struct HomeView: View {
                         }
                     })
                     
-                    ForEach(entryRepo.entries.prefix(10)) { entry in
+                    ForEach(entryRepo.entries.prefix(5)) { entry in
                         EntryCellView(entry: entry)
                             .padding(.vertical, 2)
                     }

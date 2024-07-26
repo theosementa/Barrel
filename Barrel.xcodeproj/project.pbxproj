@@ -40,6 +40,7 @@
 		D945C0542C4CD0AC00C8E51A /* InteractiveDismissableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945C0532C4CD0AC00C8E51A /* InteractiveDismissableView.swift */; };
 		D945C0562C4CD23200C8E51A /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945C0552C4CD23200C8E51A /* AppManager.swift */; };
 		D945C05A2C4CD3CA00C8E51A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945C0592C4CD3CA00C8E51A /* SplashScreenView.swift */; };
+		D945C05C2C4CD61900C8E51A /* SwipeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945C05B2C4CD61900C8E51A /* SwipeBack.swift */; };
 		D955F7872C0314000007871F /* EstimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D955F7862C0314000007871F /* EstimationCell.swift */; };
 		D96703372BD6782700BD2CEF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96703362BD6782700BD2CEF /* App.swift */; };
 		D967033B2BD6782800BD2CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D967033A2BD6782800BD2CEF /* Assets.xcassets */; };
@@ -115,6 +116,7 @@
 		D945C0532C4CD0AC00C8E51A /* InteractiveDismissableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveDismissableView.swift; sourceTree = "<group>"; };
 		D945C0552C4CD23200C8E51A /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		D945C0592C4CD3CA00C8E51A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		D945C05B2C4CD61900C8E51A /* SwipeBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeBack.swift; sourceTree = "<group>"; };
 		D955F7862C0314000007871F /* EstimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimationCell.swift; sourceTree = "<group>"; };
 		D96703332BD6782700BD2CEF /* Barrel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96703362BD6782700BD2CEF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				D945C0532C4CD0AC00C8E51A /* InteractiveDismissableView.swift */,
+				D945C05B2C4CD61900C8E51A /* SwipeBack.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				D9AE787D2BDCCFEE004E67D4 /* CreateNewVehicleSheetView.swift in Sources */,
 				D978EF5A2BD6CAA400A5513F /* CustomTextFieldView.swift in Sources */,
 				D9A47FA62BE23583002E0C7C /* StatsSummaryOfTheYearViewModel.swift in Sources */,
+				D945C05C2C4CD61900C8E51A /* SwipeBack.swift in Sources */,
 				D93DF06A2C4A981C00C26075 /* EntryAPIRequester.swift in Sources */,
 				D9A47FA22BE22AF2002E0C7C /* StatsChartView.swift in Sources */,
 				D9EE233B2C03B510003A24AD /* DateComponents+Extensions.swift in Sources */,

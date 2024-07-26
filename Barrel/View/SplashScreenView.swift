@@ -13,7 +13,8 @@ struct SplashScreenView: View {
     var body: some View {
         VStack {
             Text("Barrel")
-                .font(.system(size: 34, weight: .bold, design: .rounded))
+                .font(.system(size: 48, weight: .bold, design: .rounded))
+                .foregroundStyle(Color.customYellow)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .overlay(alignment: .bottom) {

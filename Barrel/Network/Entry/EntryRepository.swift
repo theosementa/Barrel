@@ -43,6 +43,9 @@ extension EntryRepository {
             )
             
             self.entries.append(entry)
+            
+            self.entries = entries
+                .sorted(by: { $0.date ?? .now > $1.date ?? .now })
         } catch let error {
             if let networkError = error as? NetworkError {
                 BannerManager.shared.banner = networkError.banner
@@ -59,6 +62,9 @@ extension EntryRepository {
             )
             
             self.entries.removeAll(where: { $0.id == entry.id })
+            
+            self.entries = entries
+                .sorted(by: { $0.date ?? .now > $1.date ?? .now })
         } catch let error {
             if let networkError = error as? NetworkError {
                 BannerManager.shared.banner = networkError.banner

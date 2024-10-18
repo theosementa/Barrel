@@ -6,6 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D953705F2CC21A89003AB56F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95370592CC21A89003AB56F /* Preview Assets.xcassets */; };
+		D95370602CC21A89003AB56F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D953705B2CC21A89003AB56F /* Assets.xcassets */; };
+		D95370612CC21A89003AB56F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953705C2CC21A89003AB56F /* App.swift */; };
+		D95370622CC21A89003AB56F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953705D2CC21A89003AB56F /* ContentView.swift */; };
+		D95370652CC21A8C003AB56F /* BarrelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370632CC21A8C003AB56F /* BarrelTests.swift */; };
+		D95370692CC21A8F003AB56F /* BarrelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370662CC21A8F003AB56F /* BarrelUITests.swift */; };
+		D953706A2CC21A8F003AB56F /* BarrelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370672CC21A8F003AB56F /* BarrelUITestsLaunchTests.swift */; };
+		D953707D2CC21DD1003AB56F /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953706E2CC21DD1003AB56F /* AsyncButton.swift */; };
+		D953707E2CC21DD1003AB56F /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953707A2CC21DD1003AB56F /* UserRepository.swift */; };
+		D953707F2CC21DD1003AB56F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370712CC21DD1003AB56F /* NetworkService.swift */; };
+		D95370802CC21DD1003AB56F /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370762CC21DD1003AB56F /* TokenManager.swift */; };
+		D95370812CC21DD1003AB56F /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953706D2CC21DD1003AB56F /* APIRequestBuilder.swift */; };
+		D95370822CC21DD1003AB56F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953706F2CC21DD1003AB56F /* NetworkError.swift */; };
+		D95370832CC21DD1003AB56F /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370752CC21DD1003AB56F /* SocketManager.swift */; };
+		D95370842CC21DD1003AB56F /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370722CC21DD1003AB56F /* ViewState.swift */; };
+		D95370852CC21DD1003AB56F /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370742CC21DD1003AB56F /* KeychainManager.swift */; };
+		D95370862CC21DD1003AB56F /* UserAPIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370782CC21DD1003AB56F /* UserAPIRequester.swift */; };
+		D95370872CC21DD1003AB56F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370792CC21DD1003AB56F /* UserModel.swift */; };
+		D95370882CC21DD1003AB56F /* NetworkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370702CC21DD1003AB56F /* NetworkPath.swift */; };
+		D953708B2CC21EE3003AB56F /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953708A2CC21EE3003AB56F /* CarModel.swift */; };
+		D953708E2CC21F20003AB56F /* CarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953708D2CC21F20003AB56F /* CarEntry.swift */; };
+		D95370902CC21F68003AB56F /* CarAPIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953708F2CC21F68003AB56F /* CarAPIRequester.swift */; };
+		D95370922CC220FA003AB56F /* CarEntryAPIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370912CC220FA003AB56F /* CarEntryAPIRequester.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D953703D2CC21A71003AB56F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,25 +53,30 @@
 		D953702C2CC21A70003AB56F /* Barrel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D953703C2CC21A71003AB56F /* BarrelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95370462CC21A71003AB56F /* BarrelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95370592CC21A89003AB56F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D953705B2CC21A89003AB56F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D953705C2CC21A89003AB56F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D953705D2CC21A89003AB56F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D95370632CC21A8C003AB56F /* BarrelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrelTests.swift; sourceTree = "<group>"; };
+		D95370662CC21A8F003AB56F /* BarrelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrelUITests.swift; sourceTree = "<group>"; };
+		D95370672CC21A8F003AB56F /* BarrelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D953706D2CC21DD1003AB56F /* APIRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
+		D953706E2CC21DD1003AB56F /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		D953706F2CC21DD1003AB56F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D95370702CC21DD1003AB56F /* NetworkPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPath.swift; sourceTree = "<group>"; };
+		D95370712CC21DD1003AB56F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D95370722CC21DD1003AB56F /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		D95370742CC21DD1003AB56F /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		D95370752CC21DD1003AB56F /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		D95370762CC21DD1003AB56F /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		D95370782CC21DD1003AB56F /* UserAPIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIRequester.swift; sourceTree = "<group>"; };
+		D95370792CC21DD1003AB56F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D953707A2CC21DD1003AB56F /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		D953708A2CC21EE3003AB56F /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		D953708D2CC21F20003AB56F /* CarEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntry.swift; sourceTree = "<group>"; };
+		D953708F2CC21F68003AB56F /* CarAPIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPIRequester.swift; sourceTree = "<group>"; };
+		D95370912CC220FA003AB56F /* CarEntryAPIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryAPIRequester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		D953702E2CC21A70003AB56F /* Barrel */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Barrel;
-			sourceTree = "<group>";
-		};
-		D953703F2CC21A71003AB56F /* BarrelTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BarrelTests;
-			sourceTree = "<group>";
-		};
-		D95370492CC21A71003AB56F /* BarrelUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BarrelUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D95370292CC21A70003AB56F /* Frameworks */ = {
@@ -75,9 +106,9 @@
 		D95370232CC21A70003AB56F = {
 			isa = PBXGroup;
 			children = (
-				D953702E2CC21A70003AB56F /* Barrel */,
-				D953703F2CC21A71003AB56F /* BarrelTests */,
-				D95370492CC21A71003AB56F /* BarrelUITests */,
+				D953705E2CC21A89003AB56F /* Barrel */,
+				D95370642CC21A8C003AB56F /* BarrelTests */,
+				D95370682CC21A8F003AB56F /* BarrelUITests */,
 				D953702D2CC21A70003AB56F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +121,122 @@
 				D95370462CC21A71003AB56F /* BarrelUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D953705A2CC21A89003AB56F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D95370592CC21A89003AB56F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D953705E2CC21A89003AB56F /* Barrel */ = {
+			isa = PBXGroup;
+			children = (
+				D953705C2CC21A89003AB56F /* App.swift */,
+				D953705D2CC21A89003AB56F /* ContentView.swift */,
+				D953707C2CC21DD1003AB56F /* Network */,
+				D953706B2CC21AA0003AB56F /* Resources */,
+				D953705A2CC21A89003AB56F /* Preview Content */,
+			);
+			path = Barrel;
+			sourceTree = "<group>";
+		};
+		D95370642CC21A8C003AB56F /* BarrelTests */ = {
+			isa = PBXGroup;
+			children = (
+				D95370632CC21A8C003AB56F /* BarrelTests.swift */,
+			);
+			path = BarrelTests;
+			sourceTree = "<group>";
+		};
+		D95370682CC21A8F003AB56F /* BarrelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D95370662CC21A8F003AB56F /* BarrelUITests.swift */,
+				D95370672CC21A8F003AB56F /* BarrelUITestsLaunchTests.swift */,
+			);
+			path = BarrelUITests;
+			sourceTree = "<group>";
+		};
+		D953706B2CC21AA0003AB56F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D953706C2CC21AA7003AB56F /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D953706C2CC21AA7003AB56F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D953705B2CC21A89003AB56F /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D95370732CC21DD1003AB56F /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				D953706D2CC21DD1003AB56F /* APIRequestBuilder.swift */,
+				D953706E2CC21DD1003AB56F /* AsyncButton.swift */,
+				D953706F2CC21DD1003AB56F /* NetworkError.swift */,
+				D95370702CC21DD1003AB56F /* NetworkPath.swift */,
+				D95370712CC21DD1003AB56F /* NetworkService.swift */,
+				D95370722CC21DD1003AB56F /* ViewState.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		D95370772CC21DD1003AB56F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D95370742CC21DD1003AB56F /* KeychainManager.swift */,
+				D95370752CC21DD1003AB56F /* SocketManager.swift */,
+				D95370762CC21DD1003AB56F /* TokenManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D953707B2CC21DD1003AB56F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D95370782CC21DD1003AB56F /* UserAPIRequester.swift */,
+				D95370792CC21DD1003AB56F /* UserModel.swift */,
+				D953707A2CC21DD1003AB56F /* UserRepository.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D953707C2CC21DD1003AB56F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D95370732CC21DD1003AB56F /* Generic */,
+				D95370772CC21DD1003AB56F /* Managers */,
+				D953707B2CC21DD1003AB56F /* User */,
+				D95370892CC21ECE003AB56F /* Car */,
+				D953708C2CC21F11003AB56F /* CarEntry */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D95370892CC21ECE003AB56F /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				D953708A2CC21EE3003AB56F /* CarModel.swift */,
+				D953708F2CC21F68003AB56F /* CarAPIRequester.swift */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		D953708C2CC21F11003AB56F /* CarEntry */ = {
+			isa = PBXGroup;
+			children = (
+				D953708D2CC21F20003AB56F /* CarEntry.swift */,
+				D95370912CC220FA003AB56F /* CarEntryAPIRequester.swift */,
+			);
+			path = CarEntry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +253,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				D953702E2CC21A70003AB56F /* Barrel */,
 			);
 			name = Barrel;
 			packageProductDependencies = (
@@ -130,9 +274,6 @@
 			dependencies = (
 				D953703E2CC21A71003AB56F /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				D953703F2CC21A71003AB56F /* BarrelTests */,
-			);
 			name = BarrelTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +293,6 @@
 			);
 			dependencies = (
 				D95370482CC21A71003AB56F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D95370492CC21A71003AB56F /* BarrelUITests */,
 			);
 			name = BarrelUITests;
 			packageProductDependencies = (
@@ -212,6 +350,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D953705F2CC21A89003AB56F /* Preview Assets.xcassets in Resources */,
+				D95370602CC21A89003AB56F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +376,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95370612CC21A89003AB56F /* App.swift in Sources */,
+				D953708E2CC21F20003AB56F /* CarEntry.swift in Sources */,
+				D95370622CC21A89003AB56F /* ContentView.swift in Sources */,
+				D953707D2CC21DD1003AB56F /* AsyncButton.swift in Sources */,
+				D953707E2CC21DD1003AB56F /* UserRepository.swift in Sources */,
+				D953707F2CC21DD1003AB56F /* NetworkService.swift in Sources */,
+				D95370802CC21DD1003AB56F /* TokenManager.swift in Sources */,
+				D95370812CC21DD1003AB56F /* APIRequestBuilder.swift in Sources */,
+				D95370822CC21DD1003AB56F /* NetworkError.swift in Sources */,
+				D95370922CC220FA003AB56F /* CarEntryAPIRequester.swift in Sources */,
+				D95370832CC21DD1003AB56F /* SocketManager.swift in Sources */,
+				D95370842CC21DD1003AB56F /* ViewState.swift in Sources */,
+				D95370852CC21DD1003AB56F /* KeychainManager.swift in Sources */,
+				D953708B2CC21EE3003AB56F /* CarModel.swift in Sources */,
+				D95370862CC21DD1003AB56F /* UserAPIRequester.swift in Sources */,
+				D95370872CC21DD1003AB56F /* UserModel.swift in Sources */,
+				D95370882CC21DD1003AB56F /* NetworkPath.swift in Sources */,
+				D95370902CC21F68003AB56F /* CarAPIRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95370652CC21A8C003AB56F /* BarrelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +409,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95370692CC21A8F003AB56F /* BarrelUITests.swift in Sources */,
+				D953706A2CC21A8F003AB56F /* BarrelUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

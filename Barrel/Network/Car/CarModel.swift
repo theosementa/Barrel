@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CarModel: Codable {
+struct CarModel: Codable, Identifiable {
     var id: Int?
     var name: String?
     var entries: [CarEntry]?
@@ -18,4 +18,25 @@ struct CarModel: Codable {
         self.name = name
         self.entries = entries
     }
+    
+    var mileages: [Int] {
+        if let entries {
+            return entries
+                .map { $0.mileage ?? 0 }
+                .filter { $0 != 0 }
+                .sorted(by: <)
+        } else { return [] }
+    }
+}
+
+extension CarModel {
+    static let preview: Self = .init(
+        id: 1,
+        name: "Audi A3 Sportback",
+        entries: [
+            .preview1,
+            .preview2,
+            .preview3
+        ]
+    )
 }

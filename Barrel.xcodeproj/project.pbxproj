@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		D91E8F5D2CC25F9B00A2A006 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E8F5C2CC25F9B00A2A006 /* SignInView.swift */; };
 		D91E8F5F2CC2600500A2A006 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E8F5E2CC2600500A2A006 /* SignUpViewModel.swift */; };
+		D91E8F612CC277FF00A2A006 /* CarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E8F602CC277FF00A2A006 /* CarRepository.swift */; };
+		D91E8F642CC279AC00A2A006 /* CarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E8F632CC279AC00A2A006 /* CarRow.swift */; };
 		D953705F2CC21A89003AB56F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95370592CC21A89003AB56F /* Preview Assets.xcassets */; };
 		D95370602CC21A89003AB56F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D953705B2CC21A89003AB56F /* Assets.xcassets */; };
 		D95370612CC21A89003AB56F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953705C2CC21A89003AB56F /* App.swift */; };
-		D95370622CC21A89003AB56F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953705D2CC21A89003AB56F /* ContentView.swift */; };
+		D95370622CC21A89003AB56F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953705D2CC21A89003AB56F /* HomeView.swift */; };
 		D95370652CC21A8C003AB56F /* BarrelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370632CC21A8C003AB56F /* BarrelTests.swift */; };
 		D95370692CC21A8F003AB56F /* BarrelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370662CC21A8F003AB56F /* BarrelUITests.swift */; };
 		D953706A2CC21A8F003AB56F /* BarrelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370672CC21A8F003AB56F /* BarrelUITestsLaunchTests.swift */; };
@@ -68,13 +70,15 @@
 /* Begin PBXFileReference section */
 		D91E8F5C2CC25F9B00A2A006 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		D91E8F5E2CC2600500A2A006 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D91E8F602CC277FF00A2A006 /* CarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepository.swift; sourceTree = "<group>"; };
+		D91E8F632CC279AC00A2A006 /* CarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRow.swift; sourceTree = "<group>"; };
 		D953702C2CC21A70003AB56F /* Barrel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D953703C2CC21A71003AB56F /* BarrelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95370462CC21A71003AB56F /* BarrelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95370592CC21A89003AB56F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D953705B2CC21A89003AB56F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D953705C2CC21A89003AB56F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		D953705D2CC21A89003AB56F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D953705D2CC21A89003AB56F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D95370632CC21A8C003AB56F /* BarrelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrelTests.swift; sourceTree = "<group>"; };
 		D95370662CC21A8F003AB56F /* BarrelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrelUITests.swift; sourceTree = "<group>"; };
 		D95370672CC21A8F003AB56F /* BarrelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrelUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -135,6 +139,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D91E8F622CC2799400A2A006 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				D91E8F632CC279AC00A2A006 /* CarRow.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
 		D95370232CC21A70003AB56F = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				D953705C2CC21A89003AB56F /* App.swift */,
-				D953705D2CC21A89003AB56F /* ContentView.swift */,
+				D953705D2CC21A89003AB56F /* HomeView.swift */,
 				D95370A72CC236B7003AB56F /* Views */,
 				D95370A82CC236BD003AB56F /* Components */,
 				D95370B92CC23AAF003AB56F /* ViewModels */,
@@ -264,6 +276,7 @@
 			children = (
 				D953708A2CC21EE3003AB56F /* CarModel.swift */,
 				D953708F2CC21F68003AB56F /* CarAPIRequester.swift */,
+				D91E8F602CC277FF00A2A006 /* CarRepository.swift */,
 			);
 			path = Car;
 			sourceTree = "<group>";
@@ -328,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				D95370B42CC2397B003AB56F /* Buttons */,
+				D91E8F622CC2799400A2A006 /* Rows */,
 				D95370A92CC2381D003AB56F /* TextFields */,
 			);
 			path = Components;
@@ -526,12 +540,14 @@
 				D95370A32CC22415003AB56F /* Push.swift in Sources */,
 				D95370A42CC22415003AB56F /* NavigationDirection.swift in Sources */,
 				D95370A52CC22415003AB56F /* NavigationStack.swift in Sources */,
-				D95370622CC21A89003AB56F /* ContentView.swift in Sources */,
+				D95370622CC21A89003AB56F /* HomeView.swift in Sources */,
+				D91E8F612CC277FF00A2A006 /* CarRepository.swift in Sources */,
 				D953707D2CC21DD1003AB56F /* AsyncButton.swift in Sources */,
 				D953707E2CC21DD1003AB56F /* UserRepository.swift in Sources */,
 				D953707F2CC21DD1003AB56F /* NetworkService.swift in Sources */,
 				D91E8F5F2CC2600500A2A006 /* SignUpViewModel.swift in Sources */,
 				D95370802CC21DD1003AB56F /* TokenManager.swift in Sources */,
+				D91E8F642CC279AC00A2A006 /* CarRow.swift in Sources */,
 				D95370812CC21DD1003AB56F /* APIRequestBuilder.swift in Sources */,
 				D95370822CC21DD1003AB56F /* NetworkError.swift in Sources */,
 				D95370922CC220FA003AB56F /* CarEntryAPIRequester.swift in Sources */,

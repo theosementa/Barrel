@@ -23,7 +23,7 @@ private extension NavigationManager {
         Group {
             switch direction {
             case .home:
-                ContentView()
+                HomeView()
             case .signIn:
                 SignInView()
             case .signUp:

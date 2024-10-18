@@ -16,6 +16,7 @@ struct BarrelApp: App {
     @StateObject private var networkManager: NetworkManager = .init()
     
     @StateObject private var userRepository: UserRepository = .shared
+    @StateObject private var carRepository: CarRepository = .shared
     
     // MARK: -
     var body: some Scene {
@@ -24,7 +25,7 @@ struct BarrelApp: App {
                 switch appManager.state {
                 case .idle:     EmptyView()
                 case .loading:  EmptyView()
-                case .success:  ContentView()
+                case .success:  HomeView()
                 case .failed:   SignUpView()
                 }
             }
@@ -32,6 +33,7 @@ struct BarrelApp: App {
             .environmentObject(appManager)
             .environmentObject(networkManager)
             .environmentObject(userRepository)
+            .environmentObject(carRepository)
             .task {
                 appManager.state = .loading
                 do {

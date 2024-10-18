@@ -1,5 +1,5 @@
 //
-//  SignInView.swift
+//  SignUpView.swift
 //  Barrel
 //
 //  Created by Theo Sementa on 18/10/2024.
@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct SignInView: View {
+struct SignUpView: View {
     
     // Environment
     @EnvironmentObject private var appManager: AppManager
     @EnvironmentObject private var networkManager: NetworkManager
+    @EnvironmentObject private var router: NavigationManager
     @EnvironmentObject private var userRepository: UserRepository
     
-    @StateObject private var viewModel: SignInViewModel = .init()
+    @StateObject private var viewModel: SignUpViewModel = .init()
+    
+    @Environment(\.dismiss) private var dismiss
     
     // MARK: -
     var body: some View {
@@ -39,26 +42,30 @@ struct SignInView: View {
                 Text("Tu n'as pas de connexion internet.")
             }
             Spacer()
-            VStack(spacing: 8) {
-                CreateButton(text: "Me connecter") {
+            VStack(spacing: 12) {
+                CreateButton(text: "Créer mon compte") {
                     Task {
-                        await userRepository.login(body: .init(username: viewModel.username, password: viewModel.password))
+                        await userRepository.register(body: .init(username: viewModel.username, password: viewModel.password))
                         if userRepository.currentUser != nil {
                             appManager.state = .success
+                            dismiss()
                         }
                     }
                 }
-                
+                NavigationButton(push: router.pushSignIn()) {
+                    Text("J'ai déjà un compte")
+                        .font(.system(size: 12, weight: .semibold))
+                }
             }
         }
         .padding()
-        .navigationTitle("Connexion")
+        .navigationTitle("Inscription")
     } // body
 } // struct
 
 // MARK: - Preview
 #Preview {
-    NavigationStack { SignInView() }
+    NavigationStack { SignUpView() }
         .environmentObject(NetworkManager())
         .environmentObject(UserRepository())
         .environmentObject(AppManager())

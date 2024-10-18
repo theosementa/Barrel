@@ -11,8 +11,10 @@ import SwiftUI
 
 enum NavigationDirection: Identifiable {
         
+    case signIn
+    case signUp
+    
     case home
-    case detail(car: CarModel)
 
     var id: Self { self }
 }
@@ -20,8 +22,9 @@ enum NavigationDirection: Identifiable {
 extension NavigationDirection: Equatable {
     static func == (lhs: NavigationDirection, rhs: NavigationDirection) -> Bool {
         switch (lhs, rhs) {
-        case (.home, .home),
-            (.detail, .detail):
+        case (.signIn, .signIn),
+            (.signUp, .signUp),
+            (.home, .home):
             return true
 
         default:

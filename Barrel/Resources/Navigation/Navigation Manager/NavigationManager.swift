@@ -21,12 +21,14 @@ private extension NavigationManager {
     @ViewBuilder
     func buildView(direction: NavigationDirection, route: Route) -> some View {
         Group {
-//            switch direction {
-//            case .home:
+            switch direction {
+            case .home:
                 ContentView()
-//            case .detail(let car):
-//                CarDetailView(carModel: car)
-//            }
+            case .signIn:
+                SignInView()
+            case .signUp:
+                SignUpView()
+            }
         }
     }
 

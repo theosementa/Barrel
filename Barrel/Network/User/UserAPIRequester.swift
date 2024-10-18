@@ -10,6 +10,7 @@ import Foundation
 enum UserAPIRequester: APIRequestBuilder {
     case me
     case register(body: UserModel)
+    case login(body: UserModel)
     case refreshToken(refreshToken: String)
 }
 
@@ -18,6 +19,7 @@ extension UserAPIRequester {
         switch self {
         case .me:                               return NetworkPath.User.me
         case .register:                         return NetworkPath.User.register
+        case .login:                            return NetworkPath.User.login
         case .refreshToken(let refreshToken):   return NetworkPath.User.refreshToken(refreshToken: refreshToken)
         }
     }
@@ -26,6 +28,7 @@ extension UserAPIRequester {
         switch self {
         case .me:           return .GET
         case .register:     return .POST
+        case .login:        return .POST
         case .refreshToken: return .GET
         }
     }
@@ -36,6 +39,7 @@ extension UserAPIRequester {
         switch self {
         case .me:           return true
         case .register:     return false
+        case .login:        return false
         case .refreshToken: return false
         }
     }
@@ -43,6 +47,7 @@ extension UserAPIRequester {
     var body: Data? {
         switch self {
         case .register(let body):   return try? JSONEncoder().encode(body)
+        case .login(let body):      return try? JSONEncoder().encode(body)
         default:                    return nil
         }
     }

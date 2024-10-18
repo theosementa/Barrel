@@ -10,6 +10,14 @@ import SwiftUI
 
 extension NavigationManager {
     
+    func pushSignIn() {
+        navigateTo(.signIn)
+    }
+    
+    func pushSignUp() {
+        navigateTo(.signUp)
+    }
+    
 
 //    func pushOnboardingUserInfo() {
 //        navigateTo(.onboardingUserInfo)

@@ -9,9 +9,9 @@ import Foundation
 
 extension NavigationManager {
     
-    func presentCarDetail(car: CarModel, dismissAction: (() -> Void)? = nil) {
-        presentSheet(.detail(car: car), dismissAction)
-    }
+//    func presentCarDetail(car: CarModel, dismissAction: (() -> Void)? = nil) {
+//        presentSheet(.detail(car: car), dismissAction)
+//    }
 
     
 }

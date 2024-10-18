@@ -38,6 +38,24 @@ extension UserRepository {
     }
     
     @MainActor
+    func login(body: UserModel) async {
+        do {
+            let user = try await NetworkService.shared.sendRequest(
+                apiBuilder: UserAPIRequester.login(body: body),
+                responseModel: UserModel.self
+            )
+            
+            if let token = user.token, let refreshToken = user.refreshToken {
+                TokenManager.shared.setTokenAndRefreshToken(token: token, refreshToken: refreshToken)
+            }
+            
+            self.currentUser = user
+        } catch {
+            self.currentUser = nil
+        }
+    }
+    
+    @MainActor
     func loginWithToken() async throws {
         try await TokenManager.shared.refreshToken()
     }

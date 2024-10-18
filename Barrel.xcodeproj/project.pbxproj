@@ -30,7 +30,20 @@
 		D953708E2CC21F20003AB56F /* CarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953708D2CC21F20003AB56F /* CarEntry.swift */; };
 		D95370902CC21F68003AB56F /* CarAPIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953708F2CC21F68003AB56F /* CarAPIRequester.swift */; };
 		D95370922CC220FA003AB56F /* CarEntryAPIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370912CC220FA003AB56F /* CarEntryAPIRequester.swift */; };
-		D95370942CC22331003AB56F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95370932CC22331003AB56F /* Colors.xcassets */; };
+		D953709F2CC22415003AB56F /* Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370982CC22415003AB56F /* Present.swift */; };
+		D95370A02CC22415003AB56F /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370972CC22415003AB56F /* NavigationManager.swift */; };
+		D95370A12CC22415003AB56F /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370952CC22415003AB56F /* NavigationButton.swift */; };
+		D95370A22CC22415003AB56F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953709D2CC22415003AB56F /* Router.swift */; };
+		D95370A32CC22415003AB56F /* Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370992CC22415003AB56F /* Push.swift */; };
+		D95370A42CC22415003AB56F /* NavigationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953709B2CC22415003AB56F /* NavigationDirection.swift */; };
+		D95370A52CC22415003AB56F /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953709C2CC22415003AB56F /* NavigationStack.swift */; };
+		D95370AB2CC2382F003AB56F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370AA2CC2382F003AB56F /* CustomTextField.swift */; };
+		D95370AE2CC23865003AB56F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370AD2CC2385F003AB56F /* Color+Extensions.swift */; };
+		D95370B22CC2392C003AB56F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370B12CC2392C003AB56F /* NetworkManager.swift */; };
+		D95370B32CC2392C003AB56F /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370B02CC2392C003AB56F /* AppManager.swift */; };
+		D95370B62CC23983003AB56F /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370B52CC23983003AB56F /* CreateButton.swift */; };
+		D95370B82CC23A13003AB56F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370B72CC23A13003AB56F /* SignInView.swift */; };
+		D95370BB2CC23AC3003AB56F /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95370BA2CC23AC3003AB56F /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +90,20 @@
 		D953708D2CC21F20003AB56F /* CarEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntry.swift; sourceTree = "<group>"; };
 		D953708F2CC21F68003AB56F /* CarAPIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPIRequester.swift; sourceTree = "<group>"; };
 		D95370912CC220FA003AB56F /* CarEntryAPIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryAPIRequester.swift; sourceTree = "<group>"; };
-		D95370932CC22331003AB56F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D95370952CC22415003AB56F /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		D95370972CC22415003AB56F /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		D95370982CC22415003AB56F /* Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Present.swift; sourceTree = "<group>"; };
+		D95370992CC22415003AB56F /* Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push.swift; sourceTree = "<group>"; };
+		D953709B2CC22415003AB56F /* NavigationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDirection.swift; sourceTree = "<group>"; };
+		D953709C2CC22415003AB56F /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
+		D953709D2CC22415003AB56F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D95370AA2CC2382F003AB56F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D95370AD2CC2385F003AB56F /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		D95370B02CC2392C003AB56F /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		D95370B12CC2392C003AB56F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D95370B52CC23983003AB56F /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButton.swift; sourceTree = "<group>"; };
+		D95370B72CC23A13003AB56F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		D95370BA2CC23AC3003AB56F /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +164,9 @@
 			children = (
 				D953705C2CC21A89003AB56F /* App.swift */,
 				D953705D2CC21A89003AB56F /* ContentView.swift */,
+				D95370A72CC236B7003AB56F /* Views */,
+				D95370A82CC236BD003AB56F /* Components */,
+				D95370B92CC23AAF003AB56F /* ViewModels */,
 				D953707C2CC21DD1003AB56F /* Network */,
 				D953706B2CC21AA0003AB56F /* Resources */,
 				D953705A2CC21A89003AB56F /* Preview Content */,
@@ -166,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				D953706C2CC21AA7003AB56F /* Assets */,
+				D95370AC2CC23856003AB56F /* Extensions */,
+				D95370AF2CC23921003AB56F /* Managers */,
+				D953709E2CC22415003AB56F /* Navigation */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -174,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				D953705B2CC21A89003AB56F /* Assets.xcassets */,
-				D95370932CC22331003AB56F /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -240,6 +271,102 @@
 				D95370912CC220FA003AB56F /* CarEntryAPIRequester.swift */,
 			);
 			path = CarEntry;
+			sourceTree = "<group>";
+		};
+		D95370962CC22415003AB56F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D95370952CC22415003AB56F /* NavigationButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D953709A2CC22415003AB56F /* Navigation Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D95370972CC22415003AB56F /* NavigationManager.swift */,
+				D95370982CC22415003AB56F /* Present.swift */,
+				D95370992CC22415003AB56F /* Push.swift */,
+			);
+			path = "Navigation Manager";
+			sourceTree = "<group>";
+		};
+		D953709E2CC22415003AB56F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D95370962CC22415003AB56F /* Components */,
+				D953709A2CC22415003AB56F /* Navigation Manager */,
+				D953709B2CC22415003AB56F /* NavigationDirection.swift */,
+				D953709C2CC22415003AB56F /* NavigationStack.swift */,
+				D953709D2CC22415003AB56F /* Router.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D95370A62CC236AB003AB56F /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				D95370B72CC23A13003AB56F /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		D95370A72CC236B7003AB56F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D95370A62CC236AB003AB56F /* SignIn */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D95370A82CC236BD003AB56F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D95370B42CC2397B003AB56F /* Buttons */,
+				D95370A92CC2381D003AB56F /* TextFields */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D95370A92CC2381D003AB56F /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				D95370AA2CC2382F003AB56F /* CustomTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		D95370AC2CC23856003AB56F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D95370AD2CC2385F003AB56F /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D95370AF2CC23921003AB56F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D95370B02CC2392C003AB56F /* AppManager.swift */,
+				D95370B12CC2392C003AB56F /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D95370B42CC2397B003AB56F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D95370B52CC23983003AB56F /* CreateButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		D95370B92CC23AAF003AB56F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D95370BA2CC23AC3003AB56F /* SignInViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,7 +480,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95370942CC22331003AB56F /* Colors.xcassets in Resources */,
 				D953705F2CC21A89003AB56F /* Preview Assets.xcassets in Resources */,
 				D95370602CC21A89003AB56F /* Assets.xcassets in Resources */,
 			);
@@ -380,8 +506,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95370AB2CC2382F003AB56F /* CustomTextField.swift in Sources */,
+				D95370B62CC23983003AB56F /* CreateButton.swift in Sources */,
 				D95370612CC21A89003AB56F /* App.swift in Sources */,
+				D95370AE2CC23865003AB56F /* Color+Extensions.swift in Sources */,
+				D95370BB2CC23AC3003AB56F /* SignInViewModel.swift in Sources */,
 				D953708E2CC21F20003AB56F /* CarEntry.swift in Sources */,
+				D953709F2CC22415003AB56F /* Present.swift in Sources */,
+				D95370A02CC22415003AB56F /* NavigationManager.swift in Sources */,
+				D95370A12CC22415003AB56F /* NavigationButton.swift in Sources */,
+				D95370A22CC22415003AB56F /* Router.swift in Sources */,
+				D95370A32CC22415003AB56F /* Push.swift in Sources */,
+				D95370A42CC22415003AB56F /* NavigationDirection.swift in Sources */,
+				D95370A52CC22415003AB56F /* NavigationStack.swift in Sources */,
 				D95370622CC21A89003AB56F /* ContentView.swift in Sources */,
 				D953707D2CC21DD1003AB56F /* AsyncButton.swift in Sources */,
 				D953707E2CC21DD1003AB56F /* UserRepository.swift in Sources */,
@@ -394,10 +531,13 @@
 				D95370842CC21DD1003AB56F /* ViewState.swift in Sources */,
 				D95370852CC21DD1003AB56F /* KeychainManager.swift in Sources */,
 				D953708B2CC21EE3003AB56F /* CarModel.swift in Sources */,
+				D95370B22CC2392C003AB56F /* NetworkManager.swift in Sources */,
+				D95370B32CC2392C003AB56F /* AppManager.swift in Sources */,
 				D95370862CC21DD1003AB56F /* UserAPIRequester.swift in Sources */,
 				D95370872CC21DD1003AB56F /* UserModel.swift in Sources */,
 				D95370882CC21DD1003AB56F /* NetworkPath.swift in Sources */,
 				D95370902CC21F68003AB56F /* CarAPIRequester.swift in Sources */,
+				D95370B82CC23A13003AB56F /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

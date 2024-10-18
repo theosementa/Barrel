@@ -9,24 +9,24 @@ import Foundation
 
 struct UserModel: Codable, Equatable, Identifiable {
     let id: Int?
-    let firstName: String?
     let username: String?
+    let password: String?
     let token: String?
     let refreshToken: String?
     
-    init(id: Int?, firstName: String?, username: String?, token: String?, refreshToken: String?) {
+    init(id: Int?, username: String?, password: String?, token: String?, refreshToken: String?) {
         self.id = id
-        self.firstName = firstName
         self.username = username
+        self.password = password
         self.token = token
         self.refreshToken = refreshToken
     }
     
     /// body - Used to create a new user
-    init(firstName: String, username: String) {
+    init(username: String, password: String) {
         self.id = nil
-        self.firstName = firstName
         self.username = username
+        self.password = password
         self.token = nil
         self.refreshToken = nil
     }
@@ -34,7 +34,7 @@ struct UserModel: Codable, Equatable, Identifiable {
 
 extension UserModel {
     static let preview: UserModel = .init(
-        firstName: "Theo",
-        username: "theosementa"
+        username: "theosementa",
+        password: "T33P455W0RD"
     )
 }

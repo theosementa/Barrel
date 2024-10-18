@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct AsyncButton<Label: View>: View {
     
     // Builder

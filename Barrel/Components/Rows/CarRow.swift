@@ -19,8 +19,8 @@ struct CarRow: View {
                 .font(.system(size: 24, weight: .semibold))
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            if let lastMileage = car.mileages.last {
-                Text("\(lastMileage) km")
+            if let lastMileage = car.lastMileage {
+                Text("\(lastMileage.value) km")
                     .font(.system(size: 20, weight: .medium))
             } else {
                 Text("Aucun kilométrage n'est renseigné.")

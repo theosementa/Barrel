@@ -28,6 +28,12 @@ private extension NavigationManager {
                 SignInView()
             case .signUp:
                 SignUpView()
+            case .carDetail(let car):
+                CarDetailView(car: car)
+            case .createCar:
+                CreateCarView()
+            case .createEntry:
+                CreateCarEntryView()
             }
         }
     }

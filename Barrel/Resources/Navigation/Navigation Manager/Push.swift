@@ -18,13 +18,7 @@ extension NavigationManager {
         navigateTo(.signUp)
     }
     
-
-//    func pushOnboardingUserInfo() {
-//        navigateTo(.onboardingUserInfo)
-//    }
-//    
-//    func pushDetail(activity: CyclingActivity) {
-//        navigateTo(.detail(activity: activity))
-//    }
-    
+    func pushCarDetail(car: CarModel) {
+        navigateTo(.carDetail(car: car))
+    }
 }

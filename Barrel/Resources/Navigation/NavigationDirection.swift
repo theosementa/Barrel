@@ -15,6 +15,9 @@ enum NavigationDirection: Identifiable {
     case signUp
     
     case home
+    case carDetail(car: CarModel)
+    case createCar
+    case createEntry
 
     var id: Self { self }
 }
@@ -24,7 +27,10 @@ extension NavigationDirection: Equatable {
         switch (lhs, rhs) {
         case (.signIn, .signIn),
             (.signUp, .signUp),
-            (.home, .home):
+            (.home, .home),
+            (.carDetail, .carDetail),
+            (.createCar, .createCar),
+            (.createEntry, .createEntry):
             return true
 
         default:

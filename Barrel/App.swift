@@ -38,6 +38,7 @@ struct BarrelApp: App {
                 appManager.state = .loading
                 do {
                     try await userRepository.loginWithToken()
+                    await carRepository.fetchCars()
                     appManager.state = .success
                 } catch {
                     appManager.state = .failed

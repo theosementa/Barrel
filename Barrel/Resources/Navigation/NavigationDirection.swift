@@ -17,7 +17,7 @@ enum NavigationDirection: Identifiable {
     case home
     case carDetail(car: CarModel)
     case createCar
-    case createEntry
+    case createEntry(car: CarModel)
 
     var id: Self { self }
 }

@@ -59,7 +59,7 @@ extension CarModel {
     var mileages: [MileageData] {
         if let entries {
             return entries
-                .filter { $0.mileage != 0 }
+                .filter { $0.mileage != 0 && $0.mileage != nil }
                 .map { MileageData(value: $0.mileage!, date: $0.date) }
                 .sorted { $0.value < $1.value }
         } else { return [] }

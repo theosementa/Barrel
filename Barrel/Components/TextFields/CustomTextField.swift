@@ -24,6 +24,7 @@ struct CustomTextField: View {
                 TextField(config.placeholder, text: $text)
             }
         }
+        .keyboardType(config.keyboardType)
         .textInputAutocapitalization(config.isAutoCapitalizationEnabled ? .none : .never)
         .focused($isFocused)
         .font(.system(size: 16, weight: .medium))
@@ -42,14 +43,9 @@ extension CustomTextField {
     
     struct Configuration {
         var placeholder: String
-        var isSecured: Bool
-        var isAutoCapitalizationEnabled: Bool
-        
-        init(placeholder: String, isSecured: Bool = false, isAutoCapitalizationEnabled: Bool = true) {
-            self.placeholder = placeholder
-            self.isSecured = isSecured
-            self.isAutoCapitalizationEnabled = isAutoCapitalizationEnabled
-        }
+        var isSecured: Bool = false
+        var isAutoCapitalizationEnabled: Bool = true
+        var keyboardType: UIKeyboardType = .default
     }
     
 }

@@ -11,7 +11,7 @@ enum CarEntryAPIRequester: APIRequestBuilder {
     case getEntry(id: Int)
     case edit(id: Int, body: CarEntry)
     case delete(id: Int)
-    case create(body: CarEntry)
+    case create(carID: Int, body: CarEntry)
 }
 
 extension CarEntryAPIRequester {
@@ -20,7 +20,7 @@ extension CarEntryAPIRequester {
         case .getEntry(let id): return NetworkPath.Entry.get(id)
         case .edit(let id, _):  return NetworkPath.Entry.edit(id)
         case .delete(let id):   return NetworkPath.Entry.delete(id)
-        case .create:           return NetworkPath.Entry.create
+        case .create(let id, _):return NetworkPath.Entry.create(id)
         }
     }
     
@@ -44,7 +44,7 @@ extension CarEntryAPIRequester {
     var body: Data? {
         switch self {
         case .getEntry, .delete: return nil
-        case .create(let body): return try? JSONEncoder().encode(body)
+        case .create(_, let body): return try? JSONEncoder().encode(body)
         case .edit(_, let body): return try? JSONEncoder().encode(body)
         }
     }

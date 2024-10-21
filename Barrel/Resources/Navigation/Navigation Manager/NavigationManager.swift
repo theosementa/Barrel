@@ -32,8 +32,8 @@ private extension NavigationManager {
                 CarDetailView(car: car)
             case .createCar:
                 CreateCarView()
-            case .createEntry:
-                CreateCarEntryView()
+            case .createEntry(let car):
+                CreateCarEntryView(car: car)
             }
         }
     }

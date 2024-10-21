@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateCarView: View {
     
     @StateObject private var viewModel: CreateCarViewModel = .init()
+    @EnvironmentObject private var carRepository: CarRepository
     
     @Environment(\.dismiss) private var dismiss
     
@@ -38,7 +39,7 @@ struct CreateCarView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         Task {
-                            await CarRepository.shared.createCar(body: .init(name: viewModel.carName))
+                            await carRepository.createCar(body: .init(name: viewModel.carName))
                             dismiss()
                         }
                     } label: {

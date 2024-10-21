@@ -13,8 +13,8 @@ extension NavigationManager {
         presentSheet(.createCar, dismissAction)
     }
     
-    func presentCreateEntry(dismissAction: (() -> Void)? = nil) {
-        presentSheet(.createEntry, dismissAction)
+    func presentCreateEntry(car: CarModel, dismissAction: (() -> Void)? = nil) {
+        presentSheet(.createEntry(car: car), dismissAction)
     }
     
 }

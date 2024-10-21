@@ -22,6 +22,9 @@
 		D93676962CC57E7C008F2BD2 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93676952CC57E7C008F2BD2 /* Statistics.swift */; };
 		D936769A2CC57EF7008F2BD2 /* Estimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93676992CC57EF7008F2BD2 /* Estimation.swift */; };
 		D936769C2CC57F24008F2BD2 /* Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936769B2CC57F24008F2BD2 /* Average.swift */; };
+		D936769E2CC6B99A008F2BD2 /* CreateCarEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936769D2CC6B99A008F2BD2 /* CreateCarEntryViewModel.swift */; };
+		D93676A02CC6BAD8008F2BD2 /* CarEntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936769F2CC6BAD8008F2BD2 /* CarEntryRepository.swift */; };
+		D93676A22CC6BC8A008F2BD2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93676A12CC6BC8A008F2BD2 /* String+Extensions.swift */; };
 		D953705F2CC21A89003AB56F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95370592CC21A89003AB56F /* Preview Assets.xcassets */; };
 		D95370602CC21A89003AB56F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D953705B2CC21A89003AB56F /* Assets.xcassets */; };
 		D95370612CC21A89003AB56F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953705C2CC21A89003AB56F /* App.swift */; };
@@ -94,6 +97,9 @@
 		D93676952CC57E7C008F2BD2 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		D93676992CC57EF7008F2BD2 /* Estimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimation.swift; sourceTree = "<group>"; };
 		D936769B2CC57F24008F2BD2 /* Average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Average.swift; sourceTree = "<group>"; };
+		D936769D2CC6B99A008F2BD2 /* CreateCarEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCarEntryViewModel.swift; sourceTree = "<group>"; };
+		D936769F2CC6BAD8008F2BD2 /* CarEntryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryRepository.swift; sourceTree = "<group>"; };
+		D93676A12CC6BC8A008F2BD2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		D953702C2CC21A70003AB56F /* Barrel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D953703C2CC21A71003AB56F /* BarrelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95370462CC21A71003AB56F /* BarrelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +359,7 @@
 			children = (
 				D953708D2CC21F20003AB56F /* CarEntry.swift */,
 				D95370912CC220FA003AB56F /* CarEntryAPIRequester.swift */,
+				D936769F2CC6BAD8008F2BD2 /* CarEntryRepository.swift */,
 			);
 			path = CarEntry;
 			sourceTree = "<group>";
@@ -430,6 +437,7 @@
 				D95370AD2CC2385F003AB56F /* Color+Extensions.swift */,
 				D91E8F732CC2999300A2A006 /* Date+Extensions.swift */,
 				D91E8F772CC2A34700A2A006 /* Double+Extensions.swift */,
+				D93676A12CC6BC8A008F2BD2 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -458,6 +466,7 @@
 				D95370BA2CC23AC3003AB56F /* SignInViewModel.swift */,
 				D91E8F5E2CC2600500A2A006 /* SignUpViewModel.swift */,
 				D91E8F6A2CC281F200A2A006 /* CreateCarViewModel.swift */,
+				D936769D2CC6B99A008F2BD2 /* CreateCarEntryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -608,6 +617,7 @@
 				D936769C2CC57F24008F2BD2 /* Average.swift in Sources */,
 				D95370BB2CC23AC3003AB56F /* SignInViewModel.swift in Sources */,
 				D953708E2CC21F20003AB56F /* CarEntry.swift in Sources */,
+				D93676A02CC6BAD8008F2BD2 /* CarEntryRepository.swift in Sources */,
 				D953709F2CC22415003AB56F /* Present.swift in Sources */,
 				D91E8F6B2CC281F200A2A006 /* CreateCarViewModel.swift in Sources */,
 				D95370A02CC22415003AB56F /* NavigationManager.swift in Sources */,
@@ -615,6 +625,7 @@
 				D91E8F722CC288AD00A2A006 /* MileageData.swift in Sources */,
 				D91E8F692CC2807200A2A006 /* CreateCarView.swift in Sources */,
 				D936769A2CC57EF7008F2BD2 /* Estimation.swift in Sources */,
+				D936769E2CC6B99A008F2BD2 /* CreateCarEntryViewModel.swift in Sources */,
 				D91E8F5D2CC25F9B00A2A006 /* SignInView.swift in Sources */,
 				D95370A22CC22415003AB56F /* Router.swift in Sources */,
 				D95370A32CC22415003AB56F /* Push.swift in Sources */,
@@ -637,6 +648,7 @@
 				D91E8F662CC27FD200A2A006 /* AddButton.swift in Sources */,
 				D95370842CC21DD1003AB56F /* ViewState.swift in Sources */,
 				D95370852CC21DD1003AB56F /* KeychainManager.swift in Sources */,
+				D93676A22CC6BC8A008F2BD2 /* String+Extensions.swift in Sources */,
 				D91E8F742CC2999300A2A006 /* Date+Extensions.swift in Sources */,
 				D953708B2CC21EE3003AB56F /* CarModel.swift in Sources */,
 				D95370B22CC2392C003AB56F /* NetworkManager.swift in Sources */,

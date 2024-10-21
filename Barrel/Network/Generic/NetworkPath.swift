@@ -28,7 +28,9 @@ struct NetworkPath {
     }
     
     struct Entry {
-        static let create: String = "/entry"
+        static func create(_ id: Int) -> String {
+            return "/entry/\(id)"
+        }
         static func get(_ id: Int) -> String {
             return "/entry/\(id)"
         }

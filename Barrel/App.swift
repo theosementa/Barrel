@@ -17,6 +17,7 @@ struct BarrelApp: App {
     
     @StateObject private var userRepository: UserRepository = .shared
     @StateObject private var carRepository: CarRepository = .shared
+    @StateObject private var carEntryRepository: CarEntryRepository = .shared
     
     // MARK: -
     var body: some Scene {
@@ -34,6 +35,7 @@ struct BarrelApp: App {
             .environmentObject(networkManager)
             .environmentObject(userRepository)
             .environmentObject(carRepository)
+            .environmentObject(carEntryRepository)
             .task {
                 appManager.state = .loading
                 do {

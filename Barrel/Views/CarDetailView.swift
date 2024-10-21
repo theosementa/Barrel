@@ -12,15 +12,23 @@ struct CarDetailView: View {
     // builder
     @ObservedObject var car: CarModel
     
+    @EnvironmentObject private var router: NavigationManager
+    
     // MARK: -
     var body: some View {
         ScrollView {
             if let statistics = car.statistics {
                 if let estimation = statistics.estimation {
-                    VStack(spacing: 8) {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text("Estimation")
+                            .font(.headline)
                         Text("KM à la fin de l'année : \(estimation.mileageAtEndOfCurrentYear?.format(.zeroDigit) ?? "")")
                         Text("KM à la fin du mois : \(estimation.mileageAtEndOfTheCurrentMonth?.format(.zeroDigit) ?? "")")
+                    }
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .fill(Color.Apple.backgroundComponent)
                     }
                     .padding()
                 }
@@ -48,6 +56,12 @@ struct CarDetailView: View {
                 }
             }
             .padding()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.Apple.background)
+        .overlay(alignment: .bottomTrailing) {
+            AddButton { router.presentCreateEntry(car: car) }
+                .padding()
         }
         .scrollIndicators(.hidden)
         .navigationTitle(car.name ?? "")

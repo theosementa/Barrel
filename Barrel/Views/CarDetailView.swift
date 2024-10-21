@@ -17,46 +17,72 @@ struct CarDetailView: View {
     // MARK: -
     var body: some View {
         ScrollView {
-            if let statistics = car.statistics {
-                if let estimation = statistics.estimation {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Estimation")
-                            .font(.headline)
-                        Text("KM à la fin de l'année : \(estimation.mileageAtEndOfCurrentYear?.format(.zeroDigit) ?? "")")
-                        Text("KM à la fin du mois : \(estimation.mileageAtEndOfTheCurrentMonth?.format(.zeroDigit) ?? "")")
+            VStack(spacing: 16) {
+                if let statistics = car.statistics {
+                    if let estimation = statistics.estimation {
+                        StatisticsRow(
+                            title: "Estimation",
+                            statistics: [
+                                .init(
+                                    text: "KM à la fin de l'année",
+                                    value: estimation.mileageAtEndOfCurrentYear ?? 0,
+                                    formatter: .zeroDigit
+                                ),
+                                .init(
+                                    text: "KM à la fin du mois",
+                                    value: estimation.mileageAtEndOfTheCurrentMonth ?? 0,
+                                    formatter: .zeroDigit
+                                )
+                            ]
+                        )
                     }
-                    .padding()
-                    .background {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .fill(Color.Apple.backgroundComponent)
+                    
+                    if let averages = statistics.average {
+                        StatisticsRow(
+                            title: "Moyennes",
+                            statistics: [
+                                .init(
+                                    text: "Par jour",
+                                    value: averages.mileagePerDay ?? 0,
+                                    formatter: .twoDigits
+                                ),
+                                .init(
+                                    text: "Par mois",
+                                    value: averages.mileagePerMonth ?? 0,
+                                    formatter: .zeroDigit
+                                ),
+                                .init(
+                                    text: "Par an",
+                                    value: averages.mileagePerYear ?? 0,
+                                    formatter: .zeroDigit
+                                )
+                            ]
+                        )
                     }
-                    .padding()
-                }
-                if let averages = statistics.average {
-                    VStack(spacing: 8) {
-                        Text("Moyennes")
-                        Text("Moyenne par jour : \(averages.mileagePerDay?.format(.twoDigits) ?? "")km")
-                        Text("Moyenne par mois : \(averages.mileagePerMonth?.format(.zeroDigit) ?? "")km")
-                        Text("Moyenne par an : \(averages.mileagePerYear?.format(.zeroDigit) ?? "")km")
-                    }
-                    .padding()
+                    
+                    StatisticsRow(
+                        title: "Données passées",
+                        statistics: [
+                            .init(
+                                text: "KM Parcouru",
+                                value: car.mileageTraveled,
+                                formatter: .zeroDigit
+                            )
+                        ]
+                    )
                 }
                 VStack(spacing: 8) {
-                    Text("Données passées")
-                    Text("KM Parcouru : \(car.mileageTraveled.format(.zeroDigit))km")
+                    Text("Données")
+                    if let entries = car.entries {
+                        ForEach(entries) { entry in
+                            Text("\(entry.id ?? 0): \(entry.mileage ?? 0)km - \(entry.date.formatted(date: .numeric, time: .omitted))")
+                        }
+                    }
                 }
                 .padding()
             }
-            VStack(spacing: 8) {
-                Text("Données")
-                if let entries = car.entries {
-                    ForEach(entries) { entry in
-                        Text("\(entry.id ?? 0): \(entry.mileage ?? 0)km - \(entry.date.formatted(date: .numeric, time: .omitted))")
-                    }
-                }
-            }
             .padding()
-        }
+        } // ScrollView
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.Apple.background)
         .overlay(alignment: .bottomTrailing) {
